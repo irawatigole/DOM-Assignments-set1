@@ -1,0 +1,22 @@
+<!-- Given a button on a web page, Add functionality such that, on click of a button, generate a random number between 1 - 100 and display.  -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> random number</title>
+    </head>
+    <body>             
+        <button id="btn">random number</button>
+        <h2 id="output"></h2>
+        
+        <script>
+            let btnHandle = document.getElementById('btn');
+            let outputHandle = document.getElementById('output');
+               
+             btnHandle.addEventListener('click', function(){
+                var text = Math.ceil(Math.random() * 100);
+                outputHandle.innerHTML = text;
+            }, false);
+        </script>
+    </body>
+</html>

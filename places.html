@@ -1,0 +1,39 @@
+<!-- You are given a list of names, write a function to display the item clicked by the user -->
+
+<!-- Create list of places to visit in <li> tag
+show the clicked place name in output <h2> tag
+
+
+<h2> Places to Visit </h2>
+
+function selected(ele) {} -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> names list</title>
+    </head>
+    <body> 
+            <h2 id="head">Places to visit</h2>
+            <ul id="place">
+                    <li>Bangalore</li>
+                    <li>Mysore</li>
+                    <li>Ooty</li>
+                    <li>Coorg</li>
+                </ul>              
+        <script>
+            
+            let listHandle = document.getElementById('place')
+            let headHandle = document.getElementById('head')
+        
+            listHandle.addEventListener('click', function selected(ele){
+            var text = document.createTextNode(ele.target.innerHTML);
+            
+            headHandle.innerHTML ='';
+                headHandle.appendChild(text);
+            }, false);
+          
+        </script>
+    </body>
+</html>

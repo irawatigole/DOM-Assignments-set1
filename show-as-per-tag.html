@@ -1,0 +1,38 @@
+<!-- Your user needs to display some important text, but he would like to decide HTML tag to be used to display. 
+Given an input field for user to type text and a drop down to select the HTML Tag, display the output.   -->
+
+<!DOCTYPE html>
+<html>
+        <head>
+            <title></title>
+        </head>
+        <body>
+            <div id="output">
+                <label> Enter Text </label>
+                <input type="text" name="enterText" id="text" /> <br/> 
+                <select name="tag" id="tag"> 
+                    <option value=""> Select Tag </option>
+                    <option value="h1"> h1 </option>
+                    <option value="h2"> h2 </option>
+                    <option value="p"> p </option>
+                    <option value="b"> b </option>
+                    <option value="em"> em </option>
+                </select>
+                <button id="btn"> Generate </button> 
+             </div>
+        </body>
+        <script>
+            let textHandle = document.getElementById('text');
+            let tagHandle = document.getElementById('tag');
+            let btnHandle = document.getElementById('btn');
+            let outputHandle = document.getElementById('output');                   
+            btnHandle.addEventListener('click',function(){
+                console.log(textHandle.value)
+                let tag = document.createElement(tagHandle.value);
+                let text = document.createTextNode(textHandle.value);
+                tag.appendChild(text);
+                 outputHandle.appendChild(tag);             
+            }, false)   
+        </script>  
+</html>
+
